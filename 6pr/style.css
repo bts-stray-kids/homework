@@ -1,0 +1,48 @@
+html{
+    font-family: sans-serif;
+}
+
+body *{
+    box-sizing: border-box;
+    
+    
+}
+
+ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: #661E2D;
+}
+
+p{
+   color: #661E2D; 
+   cursor: pointer;
+}
+
+
+img{
+    margin: 10px 0 10px 0;
+    cursor: pointer;
+}
+
+.container{
+    max-width: 1320px;
+    padding: 0 15px;
+    margin: 0 auto;
+    background-color: #fff0f6;
+    border-bottom: 2px solid #efa7bb;
+}
+
+.header_container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
