@@ -1,0 +1,169 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  color: #c9d6ee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+input,
+textarea,
+button {
+  font-family: inherit;
+}
+
+.form {
+  background-color: #2e3748;
+  border: 3px solid #BECAE0;
+  border-radius: 10px;
+  max-width: 350px;
+  width: 100%;
+  padding: 25px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4),
+              0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.form-group-title {
+  font-weight: bold;
+  font-size: 18px;
+  color: #c9d6ee;
+  border: none;
+  padding: 0;
+  margin-bottom: 15px;
+}
+
+.form-group {
+  border: none;
+  padding: 0;
+  margin: 0 0 15px 0;
+}
+
+.label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 16px;
+}
+
+::placeholder {
+  font-size: 12px;
+  color: #a3b3d0;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  border: 2px solid #BECAE0;
+  border-radius: 7px;
+  padding: 8px 12px;
+  margin-bottom: 15px;
+  outline: none;
+  background-color: #ffffff;
+  color: #2e3748;
+  transition: box-shadow 0.2s;
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 60px;
+  max-height: 200px;
+}
+
+.input:disabled,
+.textarea:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Чекбокс с мягким тоном */
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.checkbox-label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+}
+
+.checkbox {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.custom-checkbox {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #BECAE0;
+  border-radius: 4px;
+  background-color: #2e3748;
+  margin-right: 10px;
+  flex-shrink: 0;
+  transition: background 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+
+.checkbox:checked + .custom-checkbox {
+  background: url("../images/check-icon.svg") no-repeat center, #697EB7;
+  border-color: #697EB7;
+  box-shadow: 0 0 6px rgba(105, 126, 183, 0.4);
+}
+
+.checkbox-text {
+  font-size: 14px;
+}
+
+/* Кнопка */
+.button {
+  width: 100%;
+  cursor: pointer;
+  padding: 10px;
+  border: none;
+  border-radius: 7px;
+  background: linear-gradient(#697EB7, #BECAE0);
+  color: #2e3748;
+  font-weight: bold;
+  font-size: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.2s, box-shadow 0.2s;
+}
+
+.button:hover {
+  opacity: 0.85;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+}
+
+.button:not(:disabled):active {
+  opacity: 1;
+  filter: brightness(0.9);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.button:disabled,
+.checkbox:disabled + .custom-checkbox {
+  opacity: 0.5;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Приглушенный фокус для Tab-навигации */
+.input:focus-visible,
+.textarea:focus-visible,
+.checkbox:focus-visible + .custom-checkbox,
+.button:focus-visible {
+  outline: 2px solid #697EB7;
+  outline-offset: 2px;
+}
